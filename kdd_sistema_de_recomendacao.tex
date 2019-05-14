@@ -25,26 +25,27 @@
 \maketitle
 
 \begin{abstract}
- 1) contexto: identificar a grande area
- 2) nessa grande area precisa de pesquisar problemas em aberto
- 3) o que foi feito (objetivo)
- 4) metodologia: falar dos metodos utilizados
- 5) resultados: principal resultado
- 6)conclusao: como pode contruibuir para area de pesquisa
-
+%  1) contexto: identificar a grande area
+%  2) nessa grande area precisa de pesquisar problemas em aberto
+%  3) o que foi feito (objetivo)
+%  4) metodologia: falar dos metodos utilizados
+%  5) resultados: principal resultado
+%  6)conclusao: como pode contruibuir para area de pesquisa
+O volume de dados pode dificulta o processo de busca e filtragem de informação.  Quando se deseja buscar candidatos para preencher vagas, muitos recrutadores precisam analisar montantes de currículos, fazendo com que esse processo seja demorado. Com isso, sistemas de recomendação pode se tornar uma importante ferramenta para auxiliar os usuários nessa procura. Empresas como LinkedIn que trabalham com candidatos e vagas, já deram sua contribuição cientifica, e esse experimento foi baseado em um dos trabalhos publicados por Fedor Borisyuk, Krishnaram Kenthapadi, David Stein e Bo Zhao. Com base nos estudos realizados, foi desenvolvido uma rede neural artificial capas de classificar candidatos como aprovados ou reprovados. Foram aplicados processos de Mineração de Dados como pré-processamento, criação de \textit{bag of words } com TF-IDF para treinamento criação do modelo preditivo. O processo proposto aqui para desenvolvimento de um classificador capaz de recomendar candidatos pode otimizar muito o tempo de recrutadores.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Perceptron. Redes Neurais Artificiais. Breast Cancer Wisconsin
+Sistemas de Recomendação de Candidatos; Redes Neurais Artificiais; Mineração de Dados
 \end{IEEEkeywords}
 \selectlanguage{english}
 \begin{abstract}
-
+The volume of data can make it difficult to process and filter information. When it is desired to search for candidates to fill vacancies, many recruiters need to reduce amounts of resumes, making this process time-consuming. With this, recommendation systems can be an important tool to help users search. Companies like LinkedIn that work with candidates and vacancies, have already made their scientific contribution, and this experiment was based on one of the works published byFedor Borisyuk, Krishnaram Kenthapadi, David Stein and Bo Zhao. Based on the studies carried out, an artificial redeneural layer was developed to classify candidates as approved or disapproved. Data Mining processes were applied as pre-processing, creation of debug of words with TF-IDF for training creation of the predictive model. The process here proposed for the development of a candidate classifier to recommend candidates can greatly optimize the time workers.
 
 \end{abstract}
 \selectlanguage{brazilian}
 \begin{IEEEkeywords}
-Perceptron. Artificial Neural Network. Breast Cancer Wisconsin
+
+Candidate Recommendation System; Artificial Neural Network; data mining
 \end{IEEEkeywords}
 
 \section{INTRODUÇÃO}
@@ -133,7 +134,7 @@ As principais tarefas de pré-processamento são  \cite{mineracao_nunes}:
 \item Discretização: transforma atributos contínuos em atributos categóricos;
 \end{itemize}
 
-Durante a etapa de pre-processamento, conseguiu-se reduzir dimensionalidade e selecionamos somente com os dados apresentados nas Tabelas I e II para criar nosso sistema de recomendação. Lembrando que os mesmos foram extraídos dos seguintes documentos: 
+Durante a etapa de pré-processamento, conseguiu-se reduzir dimensionalidade e selecionar somente os dados apresentados nas Tabelas I e II para criar nosso sistema de recomendação. Lembrando que os mesmos foram extraídos dos seguintes documentos: 
 \begin{enumerate}
 \item ExperienciaProfissional
 \item Vaga
@@ -155,7 +156,7 @@ Durante a etapa de pre-processamento, conseguiu-se reduzir dimensionalidade e se
     \multicolumn{1}{p{4.217cm}|}{ Líder técnico de desenvolvimento}
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  Cargo } &
+    \multicolumn{1}{|p{3.0cm}|}{  Cargo profissional } &
     \multicolumn{1}{p{4.217cm}|}{ Desenvolvedor Java Sênior}
   \\  
   \cline{1-1}\cline{2-2}  
@@ -171,7 +172,7 @@ Durante a etapa de pre-processamento, conseguiu-se reduzir dimensionalidade e se
     \multicolumn{1}{p{4.217cm}|}{ Inteligencia Artificial}
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  Habilidades } &
+    \multicolumn{1}{|p{3.0cm}|}{  Conhecimentos } &
     \multicolumn{1}{p{4.217cm}|}{ C++, Java, Linux, Aprendizado de Máquina }
   \\  
   \hline
@@ -205,7 +206,7 @@ Durante a etapa de pre-processamento, conseguiu-se reduzir dimensionalidade e se
     \multicolumn{1}{p{4.217cm}|}{ 4 anos de experiencia com Python, Serverless, Cloud e etc}
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  Habilidades desejadas} &
+    \multicolumn{1}{|p{3.0cm}|}{  Conhecimentos desejados} &
     \multicolumn{1}{p{4.217cm}|}{ MongoDB, GIT, GIT Flow, Unix, REST API}
   \\  
   \hline
@@ -240,16 +241,16 @@ Para exemplificar melhor veja uma amostra com um dados real na Tabela III com va
     \multicolumn{1}{p{4.217cm}|}{ desenvolvedor java senior}
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  tecnico informatica} &
-    \multicolumn{1}{p{4.217cm}|}{Técnico em informática }
+    \multicolumn{1}{|p{3.0cm}|}{ Técnico em informática } &
+    \multicolumn{1}{p{4.217cm}|}{ tecnico informatica}
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  ciencias computacao} &
-    \multicolumn{1}{p{4.217cm}|}{ Ciências da Computação }
+    \multicolumn{1}{|p{3.0cm}|}{  Ciências da Computação} &
+    \multicolumn{1}{p{4.217cm}|}{ ciencias computacao }
   \\  
   \cline{1-1}\cline{2-2}  
-    \multicolumn{1}{|p{3.0cm}|}{  tnteligencia artificial} &
-    \multicolumn{1}{p{4.217cm}|}{ Inteligencia Artificial}
+    \multicolumn{1}{|p{3.0cm}|}{  inteligencia artificial} &
+    \multicolumn{1}{p{4.217cm}|}{ inteligencia artificial}
   \\  
   \cline{1-1}\cline{2-2}  
     \multicolumn{1}{|p{3.0cm}|}{  C++, Java, Linux, Aprendizado de Máquina  } &
@@ -335,7 +336,7 @@ As Redes Neurais Artificiais tiveram três importantes publicações iniciais, d
 		
     Aprendizagem ou treinamento de rede neural artificial é equivalente a encontrar os valores de todos os pesos de tal forma que a saída desejada é gerada para a entrada correspondente, pode ser visto como a minimização da função de erro computada pela diferença entre a saída da rede e o desejado na saída de um conjunto de observações de treinamento \cite{redes_neurais_apredizagem}.
 	
-	Um neurônio artificial é um modelo matemático que recebe várias entradas, x1, x2, … xm e produz uma única saída, conforme ilustrado na Figura 5.
+	Um neurônio artificial é um modelo matemático que recebe várias entradas, x1, x2, … xm e produz uma única saída, conforme ilustrado na Figura 6.
 	
 	\begin{figure}[htbp]
 	\centerline{\includegraphics[scale=.7]{imagens/neuronio_artificial.jpg}}
@@ -343,7 +344,7 @@ As Redes Neurais Artificiais tiveram três importantes publicações iniciais, d
 	\label{fig}
 	\end{figure}
 	
-	No exemplo ilustrado na Figura 5, o neurônio possui n entradas: x1, x2, … xm. Rosenblatt propôs uma regra simples para calcular a saída. Ele introduziu pesos, w1, w2, …, números reais expressando a importância das respectivas entradas para a saída. A saída do neurônio, 0 ou 1, é determinada pela soma ponderada, menor ou maior do que algum valor limiar (\textit{threshold}) \cite{reuronio}. Assim como os pesos, o threshold é um número real que é um parâmetro do neurônio. 
+	No exemplo ilustrado na Figura 6, o neurônio possui n entradas: x1, x2, … xm. Rosenblatt propôs uma regra simples para calcular a saída. Ele introduziu pesos, w1, w2, …, números reais expressando a importância das respectivas entradas para a saída. A saída do neurônio, 0 ou 1, é determinada pela soma ponderada, menor ou maior do que algum valor limiar (\textit{threshold}) \cite{reuronio}. Assim como os pesos, o threshold é um número real que é um parâmetro do neurônio. 
 
     Esse modelo apresentado é um classificador linear e binário. Além disso, é usado na aprendizagem supervisionada e pode ser usado para classificar os dados de entrada fornecidos.
     
@@ -360,96 +361,132 @@ As Redes Neurais Artificiais tiveram três importantes publicações iniciais, d
    \section{Avaliação de desempenho}
 	 \subsection{Metodologia}
 
-A definição da arquitetura em redes Perceptron de Múltiplas Camadas é um ponto muito relevante, porque por um lado, se utilizamos muitas conexões podemos ter um ajuste excessivo dos dados de treinamento, por outro lado, a falta de conexões pode fazer com que a rede não seja capaz de resolver o problema de parâmetros ajustáveis \cite{b7}.
+Objetivando criar um sistema de recomendação de candidatos para vagas, foi desenvolvido um modelo de rede neural capaz de classificar candidatos como aderentes ou não a determinas oportunidades de emprego.
+Atendendo aos procedimentos metodológicos foram criadas, nesse estudo, as seguintes etapas:
 
-    O design das camadas de entrada e saída da nossa rede é direto. Por exemplo, como estamos treinando nossa rede para classificar tumores malignos e benignos, uma maneira natural de projetar a rede é codificar o número de classes (9 classes existentes na base de dados) nos neurônios de entrada. A camada de saída conterá apenas um único neurônio com valores inferiores a 0,5 indicando que  o tumor é benigno e valores maiores que 0,5 indicando que o tumor é maligno.
+\begin{enumerate}
+\item Pesquisa bibliográfica sobre sistema de recomendação para candidatos \cite{artigo_referencia};
+\item A base de dados foi fornecida pela Reachr Soluções Inovadoras em RH
+\item Utilização das técnicas de mineração de dados para pré-processamento e aplicação de aprendizagem de máquina;
+\item Aplicação da técnica de TF-IDF para criação da bag of words;
+\item Analise descritiva dos dados gerados para identificação de anomalias;
+\item Treinamento e criação de um modelo de rede neural utilizando uma cada escondida;
+\end{enumerate}
+
+Ao final dessas etapas, criou-se modelo capaz de informar se determinado candidato deve ou não ser indicado para determina vaga.
+
 \subsection{Experimentos e resultados}
 
-\subsection{Análise dos resultados}
-	   %porques%
+    Antes da aplicação da rede neural, foram utilizados algumas etapas de pré-processamento. 
+    Durante a tarefa de limpeza, alguns registros foram removidos respeitando o seguinte critério: ter pelo menos dois campos preenchidos dos cinco existes no objeto.
     
-    Ao final do treinamento a topologia apresentada, conforme Figura 5 apresentou os melhores resultados tanto no conjunto de dados de treinamento e como no conjunto de teste. 
+    Foi realizado um processo de padronização no texto dos dos candidatos das vagas deixando conforme apresentado na Tabela III. Esse processo se fez necessário para evitar inconsistências na criação da nossa bag of words, que foi criada utilizando a técnica de TF-IDF \cite{tfidf3}.
+    
+    Primeiro selecionamos todas as vagas com seus respectivos candidatos aprovados e reprovados no processo seletivo para posteriormente aplicar a medida de similaridade do cosseno os mesmos. As combinações foram feitas em pares, conforme apresentado abaixo:
+    
+    \begin{enumerate}
+    \item sim(Cargo profissional, Título vaga)
+    \item sim(Atividade profissional, Descrição vaga)
+    \item sim(curso técnico, Requisitos obrigatórios vaga)
+    \item sim(Curso superior, Requisitos obrigatórios vaga)
+    \item sim(Pós-graduação, Requisitos obrigatórios vaga)
+    \item sim(Conhecimentos, Requisitos obrigatórios vaga)
+    \item sim(Conhecimentos, Conhecimentos desejados vaga)
+    \end{enumerate}
+
+ Os seguintes termos serão utilizados respectivamente para referir as combinações mapeadas acima: sim-cargo, sim-descricao, sim-tecnico, sim-superior, sim-pos, sim-requisitos-obrigatorios e sim-conhecimentos-desejados.
+    
+O gráfico apresentado na Figura 7, mostra o valor médio das distâncias  de similaridade do cosseno para todos os registros comparando com as classes individuais.
+      \begin{figure*}
+    \centering
+    \includegraphics[scale=0.5]{imagens/barras.png}
+    \caption{Valor médio das distâncias das similaridade do cosseno}
+    \label{barras}
+  	\end{figure*} 
+
+ No diagrama de caixa ilustrado na Figura 8, podemos perceber que os candidatos aprovados (valor média 0.249965) tem um valor médio maior em relação aos reprovados(valor médio 0.193086). 
+  \begin{figure*}
+    \centering
+    \includegraphics[scale=0.5]{imagens/grafico_dispersao.png}
+    \caption{Dispersão de similaridade do cosseno das classes}
+    \label{dispersao}
+  \end{figure*} 
+
+O próximo passo no experimento foi treinar uma rede neural que fosse capaz de classificar candidatos para tentar prever se os mesmos seriam ou não contratados para uma determinada vaga.
+    A topologia de rede esta apresentada na figura Figura 9, e abaixo segue as configurações de criação do modelo preditivo. 
     
     Particularmente, não é possível resumir o processo de design das camadas ocultas com poucas regras. 
     
         \begin{figure}[htbp]
 	\centerline{\includegraphics[scale=0.4]{imagens/topologia_rede_neural.png}}
-	\caption{Topologia Perceptron de Múltiplas Camadas}
+	\caption{Topologia Rede Neural}
 	
-	\label{fig}
+	\label{rede_neural}
 	\end{figure}
     
-   Dados utilizados no treinamento e testes:
+   Dados e configurações utilizados na criação do modelo da rede neural:
     
      \begin{itemize}
     
-    \item Função: MLP;
-    \item Taxa de aprendizado: 1;
-    \item Número de iterações: 10.000;
-    \item Camadas escondidas: 5;
-    \item Valores de neurônios em cada camada escondida: 9, 8, 8, 5 e 3;
     \item  Inicialização dos pesos: Aleatória;
-    
+    \item Taxa de aprendizado: 0,05;
+    \item Número de iterações: 10.000;
+    \item Camadas escondidas: 1;
+    \item Número de neurônios na cada camada de entrada: 7;
+    \item Número de neurônios na cada camada escondida: 7;
+    \item Função de ativação: Relu;
+    \item Número de neurônios na camada saída: ;
+    \item Função de ativação na camada saída: Sigmoid;
     \end{itemize}
   
-  Depois de determinar o número ideal de camadas ocultas, taxa de aprendizado e números de iterações tivemos os seguintes resultados nos momentos de treinamento e testes(tabela II):
      
     \begin{table}[h]
-	\caption{Resultado dos testes}
+	\caption{Matriz de confusão}
 	\begin{center}
     \begin{tabular}{l | c | r }
     \hline
-         \# Iterações &Acurácia trenamento  & Acurácia teste \\\hline
-         50 &97.42647  &95.65217    \\\hline
-         100 &98.88268  &95.65217    \\\hline
-         1000 &99.44341  &96.37681    \\\hline
-         10000 &99.08088  &97.10145   \\\hline
-         20000 &99.26471  &97.10145  \\\hline
+         \ & Aprovados  & Reprovados \\\hline
+          Aprovados & 159  & 246    \\\hline
+          Reprovados & 115 & 516    \\\hline
     \end{tabular}
     \end{center}
     \end{table}
      
+Aplicamos as seguintes medidas  de avaliação para analisar a qualidade do modelo de classificação:
+\begin{itemize}
+\item Acurácia: corresponde a proporção entre os pontos segmentados corretamente, sendo eles regiões de interesse, com a soma destes mais os pontos definido falso positivos e falsos negativos;
+
+     \[ACC = \frac{VP + VN}{VP+VN+FP+FN} = 65,15\%\]
+
+\item Precisão: taxa com que todos os exemplos classificados como positivos são realmente positivos. Nenhum exemplo negativo é incluído.
+
+    \[PRE = \frac{VP}{VP+FP} = 58,02\%\]
+
+\item  Revocação: porcentagem de exemplos positivos classificados como positivos;
+
+    \[REV = \frac{VP}{VP+FN} = 39,55\%\]
+\end{itemize}
+
     
-    Podemos observar que os resultados de classificação obtidos dos dados de teste mostrados foram bons, pois apresetaram uma acurácia alta, mesmo para testes onde o número de ciclos foi pequeno como apresentado na Tabela II.
-    
-    As Figuras 6 e 7 ilustram a retropropagação do erro de dois experimentos.
-    
-    \begin{figure}[htbp]
-	\centerline{\includegraphics[scale=0.4]{imagens/9,8,8,5,3-50.png}}
-	\caption{Função de Custo 50 iterações}
-	
-	\centerline{\includegraphics[scale=0.4]{imagens/9,8,8,5,3-1000.png}}
-	\caption{Função de Custo 1000 iterações}
-	\label{fig}
-	\end{figure}
-	
-	 O retropropagação é a técnica de rede neural mais utilizada no reconhecimento de padrões, consiste na utilização dos pesos, considerando a propagação do erro de saída da rede para a sua entrada. Este algoritmo também é conhecido como regra delta generalizada \cite{b12} \cite{b13}. 
-	 
-	 A demonstração de resultados através de gráficos é relevante, pois nos dá uma visão mais clara no alcance dos objetivos do treinamento e teste. 
-	 
-	 As Figuras 8 e 9 nos mostram o resultado do treinamento em forma de gráfico:
-	 
-	 
-    \begin{figure}[htbp]
-	\centerline{\includegraphics[scale=0.15]{grafico-treinamento.png}}
-	\caption{Resultado do treinamento}
-	
-	\label{fig}
-	\end{figure}
-	
-    \begin{figure}[htbp]
-	\centerline{\includegraphics[scale=0.15]{grafico-teste.png}}
-	\caption{Resultado do teste}
-	
-	\label{fig}
-	\end{figure}
-	    
-    
+    \subsection{Análise dos resultados}
+	   %porques%
+
+	 Ao analisarmos o gráfico da Figura 7 podemos verificar que candidatos aprovados em processos seletivos tiveram em média uma similaridade maior que os reprovados (sim-cargo, sim-descricao, sim-requisitos-obrigatorios e sim-conhecimentos-desejados). 
+     O mesmo comportamento aparece no gráfico de dispersão Figura 8. Com isso, podemos chegar a conclusão que a experiência profissional e as atividades exercidas anteriormente tiveram grande influência na tomada de decisão dos recrutadores.
+     Nosso modelo não teve uma grande acurácia conforme apresentado na Tabela IV. Isso se deve a qualidade dos dados, pois muitos dos mesmos estavam vazios . Devido a incompletude, grande parte dos candidatos aprovados não puderam ser utilizados para treinar nosso modelo, deixando as classes desbalanceadas. Isso fica evidente quando olhamos os numero de revocação e precisão.
+	   
 \section*{Conclusão perspectivas futuras}
 
-  No decorrer do trabalho podemos perceber que o assunto está sendo bastante abordado por muitos outros pesquisadores e isso nos dá uma satisfação muito grande, por perceber que tem muitos estudos feitos na área da medicina utilizando a aprendizagem de máquina, entendemos que esse assunto traz uma contribuição muito grande não só na eficiência para encontrar diagnósticos mais precisos mas também para prever ocorrências importantes como uma situação epidemiológica, por exemplo.    
+    Motivado pelo potencial dos sistemas de recomendação estudamos como criar modelos de seleção de candidatos de forma automática. A proposta aqui é utilizar uma rede neural para aprender o que é relevante para empresas no quesito de analise de currículo.
+    O volume de currículos dificulta o processo de busca e filtragem de informações, com isso, sistemas de recomendação se tornaram importantes e necessários para auxiliar usuários.
+    Considerando-se que o objetivo principal deste trabalho era criar um classificador para predizer se um candidato deve ou não ser recomendados para vaga, podemos considerar como atingido.
+    Para os próximos experimentos, irei utilizar os processos descritos aqui para aplicar em outros algoritmos de aprendizagem de máquina buscando melhores resultados.
 
-\begin{thebibliography}{00}
+\begin{thebibliography}
+
+\bibitem{artigo_referencia} F. Borisyuk, K. Kenthapadi, D. Stein, and B. Zhao. CaSMoS: A framework for
+learning candidate selection models over structured queries and documents. In
+KDD, 2016
 
 \bibitem{mineracao} LAROSE, D. T. Discovering Knowledge in Data: An Introduction to Data Mining.
 John Wiley and Sons, Inc, 2005.
@@ -505,9 +542,6 @@ Transactions On Knowledge and Data Engineering, vol. 17, no. 6, p. 734–749.
 
 \bibitem {rede_neural} T.B Ludermir “Hybrid Optimization Algorithm for the Definition of MLP Neural Network Architectures and Weights” Proceedings of the Fifth International Conference on Hybrid Intelligent Systems (HIS’05) 0-7695- 2457-5/05 20.00 2005 IEEE.
 
-\bibitem{b8} UCI Machine Learning Repository, Breast Cancer Wisconsin, disponível em http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Original), acesso em 25 de agosto de 2018.
-
-\bibitem{b11} William H. Wolberg and O.L. Mangasarian: "Multisurface method of pattern separation for medical diagnosis applied to breast cytology", Proceedings of the National Academy of Sciences, U.S.A., Volume 87, December 1990, pp 9193-9196.
 
 
 
