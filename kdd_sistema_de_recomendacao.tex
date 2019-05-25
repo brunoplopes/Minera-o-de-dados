@@ -28,10 +28,10 @@
 %  1) contexto: identificar a grande area
 %  2) nessa grande area precisa de pesquisar problemas em aberto
 %  3) o que foi feito (objetivo)
-%  4) metodologia: falar dos metodos utilizados
+%  4) metodologia: falar dos métodos utilizados
 %  5) resultados: principal resultado
-%  6)conclusao: como pode contruibuir para area de pesquisa
-O volume de dados pode dificulta o processo de busca e filtragem de informação.  Quando se deseja buscar candidatos para preencher vagas, muitos recrutadores precisam analisar montantes de currículos, fazendo com que esse processo seja demorado. Com isso, sistemas de recomendação pode se tornar uma importante ferramenta para auxiliar os usuários nessa procura. Empresas como LinkedIn que trabalham com candidatos e vagas, já deram sua contribuição cientifica, e esse experimento foi baseado em um dos trabalhos publicados por Fedor Borisyuk, Krishnaram Kenthapadi, David Stein e Bo Zhao. Com base nos estudos realizados, foi desenvolvido uma rede neural artificial capas de classificar candidatos como aprovados ou reprovados. Foram aplicados processos de Mineração de Dados como pré-processamento, criação de \textit{bag of words } com TF-IDF para treinamento criação do modelo preditivo. O processo proposto aqui para desenvolvimento de um classificador capaz de recomendar candidatos pode otimizar muito o tempo de recrutadores.
+%  6)conclusão: como pode contribuir para area de pesquisa
+    O volume de dados pode dificulta o processo de busca e filtragem de informação.  Quando se deseja buscar candidatos para preencher vagas, muitos recrutadores precisam analisar montantes de currículos, fazendo com que esse processo seja demorado. Com isso, sistemas de recomendação pode se tornar uma importante ferramenta para auxiliar os usuários nessa procura. Empresas como LinkedIn que trabalham com candidatos e vagas, já deram sua contribuição científica, e esse experimento foi baseado em um dos trabalhos publicados por Fedor Borisyuk, Krishnaram Kenthapadi, David Stein e Bo Zhao. Com base nos estudos realizados, foi desenvolvido uma rede neural artificial capaz de classificar candidatos como aprovados ou reprovados. Foram aplicados processos de Mineração de Dados como pré-processamento, criação de \textit{bag of words } com TF-IDF para treinamento criação do modelo preditivo. O processo proposto aqui para desenvolvimento de um classificador capaz de recomendar candidatos pode otimizar muito o tempo de recrutadores.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -39,32 +39,35 @@ Sistemas de Recomendação de Candidatos; Redes Neurais Artificiais; Mineração
 \end{IEEEkeywords}
 \selectlanguage{english}
 \begin{abstract}
-The volume of data can make it difficult to process and filter information. When it is desired to search for candidates to fill vacancies, many recruiters need to reduce amounts of resumes, making this process time-consuming. With this, recommendation systems can be an important tool to help users search. Companies like LinkedIn that work with candidates and vacancies, have already made their scientific contribution, and this experiment was based on one of the works published byFedor Borisyuk, Krishnaram Kenthapadi, David Stein and Bo Zhao. Based on the studies carried out, an artificial redeneural layer was developed to classify candidates as approved or disapproved. Data Mining processes were applied as pre-processing, creation of debug of words with TF-IDF for training creation of the predictive model. The process here proposed for the development of a candidate classifier to recommend candidates can greatly optimize the time workers.
+    The volume of data can make it difficult to process and filter information. When it is desired to search for candidates to fill vacancies, many recruiters need to reduce amounts of resumes, making this process time-consuming. With this recommendation systems can be an important tool to help users search. Companies like LinkedIn that work with candidates and vacancies have already made their scientific contribution and this experiment was based on one of the works published by Fedor Borisyuk, Krishnaram Kenthapadi, David Stein and Bo Zhao. Based on the studies carried out, an artificial neural network was developed to classify candidates as approved or disapproved. Data Mining processes were applied as pre-processing, creation of debug of words with TF-IDF for training creation of the predictive model. The process here proposed for the development of a candidate classifier to recommend candidates can greatly optimize the time workers.
 
 \end{abstract}
 \selectlanguage{brazilian}
 \begin{IEEEkeywords}
 
-Candidate Recommendation System; Artificial Neural Network; data mining
+Candidate Recommendation System; Artificial Neural Network; Data Mining
 \end{IEEEkeywords}
 
 \section{INTRODUÇÃO}
 
-    % Questoes em aberto, nao esclarecido, mais pesquisa
+    % Questões em aberto, não esclarecido, mais pesquisa
 %     1° – importância/relevância do estudo/pesquisa;
 % 2° – revisão bibliográfica do assunto a ser estudado/pesquisado;
 % 3° – objetivo(s) do estudo/pesquisa.
 
-Os sistemas que utilizam aprendizagem de máquina tem crescido muito, devido as inúmeras vantagens comerciais que estão trazendo para as empresas. A aplicação de sistemas de recomendação pode facilitar o processo de seleção de candidatos além de reduzir o tempo com trabalho manual. 
-Para atender a esses requisitos de negócios, minimizando custos, otimizando o tempo os sistemas de recomendação podem atender a essas restrições já que eles computam os resultados em tempo menor que os realizados por humanos.
-O processo apresentado nesse artigo tem com base cientifica estudos realizados por Fedor Borisyuk, Krishnaram Kenthapadi, David Stein e Bo Zhao, onde o objetivo deles é fazer uma recomendação em larga escala em tempo real, pois isso é fundamental em empresas de Internet como o LinkedIn. 
-A proposta desse artigo é criar um processo utilizando aprendizado de máquina para a construção de modelo eficaz para a seleção de candidatos em sistemas personalizados de busca e recomendação. 
-Em nossa abordagem usamos os processos de Mineração de Dados, método de representação de texto em vetores TF-IDF, analise descritiva de dados e criação de um classificador utilizando redes neurais.
+    Os sistemas que utilizam aprendizagem de máquina tem crescido muito, devido as inúmeras vantagens comerciais que estão trazendo para as empresas. A aplicação de sistemas de recomendação pode facilitar o processo de seleção de candidatos além de reduzir o tempo com trabalho manual. 
+    
+    Para atender a esses requisitos de negócios, minimizando custos, otimizando o tempo os sistemas de recomendação podem atender a essas restrições já que eles computam os resultados em tempo menor que os realizados por humanos.
+    
+    O processo apresentado nesse artigo tem como base cientifica estudos realizados por Fedor Borisyuk, Krishnaram Kenthapadi, David Stein e Bo Zhao, onde o objetivo deles é fazer uma recomendação em larga escala em tempo real, pois isso é fundamental em empresas de Internet como o LinkedIn. 
+   
+    A proposta desse artigo é criar um processo utilizando aprendizado de máquina para a construção de modelo eficaz para a seleção de candidatos em sistemas personalizados de busca e recomendação. 
+    Em nossa abordagem usamos os processos de Mineração de Dados, método de representação de texto em vetores TF-IDF, analise descritiva de dados e criação de um classificador utilizando redes neurais.
 
 \section{Referencial Teórico}
 	%Problema, base conceitual para a solução %
 	
-    A base de dados foi fornecida pela Reachr Soluções Inovadoras em RH, uma empresa privada que provê soluções digitais para todo processo de recrutamento e seleção de candidatos para corporações. Em cima desse conjunto conjunto de dados foram aplicados vários processos de Mineração de dados afim de extrais informações uteis para o negocio e além da aplicação de modelos preditivos utilizando técnicas de aprendizagem de máquina.
+    A base de dados foi fornecida pela Reachr Soluções Inovadoras em RH, uma empresa privada que provê soluções digitais para todo processo de recrutamento e seleção de candidatos para corporações. Em cima desse conjunto conjunto de dados foram aplicados vários processos de Mineração de dados afim de extrair informações úteis para o negocio e além da aplicação de modelos preditivos utilizando técnicas de aprendizagem de máquina.
     	
     O modelo aplicado nesse experimento utiliza um Rede Neural Artificial(RNA)  a fim classificar quais candidatos serão ou não indicados para determinada vaga de trabalho. 
     	
@@ -92,7 +95,7 @@ Em nossa abordagem usamos os processos de Mineração de Dados, método de repre
     \subsection{Base de dados}
 
  O banco de dados utilizado nesse experimento foi provido pela Reachr Soluções Inovadoras em RH.
-A base de dados foi extraída de um sistema gerenciador de banco de dados NoSQL ( bancos de dados não relacionais) cujo documento tinha o tamanho de 12,23 \textit{gigabyte} e continha 19 \textit{collections} (documentos) conforme descrito abaixo:
+A base de dados foi extraída de um sistema gerenciador de banco de dados NoSQL ( bancos de dados não relacionais) cujo arquivo tinha o tamanho de 12,23 \textit{gigabyte} e continha 19 \textit{collections} (documentos) conforme descrito abaixo:
 
 \begin{itemize}
 \item DadosBasicos: dados básicos dos candidatos;
@@ -119,9 +122,9 @@ A base de dados foi extraída de um sistema gerenciador de banco de dados NoSQL 
 Durante a etapa de pre-processamento muitos dos documentos não tiveram relevância para nossa análise e foram removidos,
 
 	\subsection{Pré-processamento de dados}
-  O processo de preparação dos dados para a mineração, também chamado de pré-processamento, segundo Han e Kamber \cite{mineracao_conceitos_tecnicas}, tem função de aprimorar a qualidade dos dados fazendo com que os processos de Mineração de dados fiquem mais eficientes.
+    O processo de preparação dos dados para a mineração, também chamado de pré-processamento, segundo Han e Kamber \cite{mineracao_conceitos_tecnicas}, tem função de aprimorar a qualidade dos dados fazendo com que os processos de Mineração de dados fiquem mais eficientes.
  
-    Os dados têm qualidade se satisfizerem os requisitos do uso pretendido . Há muitos factores que compreendem a qualidade dos dados, incluindo exatidão, integridade, consistência, oportunidade, credibilidade e interpretabilidade\cite{mineracao_conceitos_tecnicas}.
+    Os dados têm qualidade se satisfizerem os requisitos do uso pretendido. Há muitos factores que compreendem a qualidade dos dados, incluindo exatidão, integridade, consistência, oportunidade, credibilidade e interpretabilidade\cite{mineracao_conceitos_tecnicas}.
       
      Não se pode esperar que bases de dados não tenha problemas pertinentes a erro humano, falhas na coleta ou problemas com dispositivos de medição. Dados do mundo real tendem a ser incompletos, ruidosos e inconsistentes \cite{mineracao_conceitos_tecnicas}. 
 
@@ -225,11 +228,12 @@ Durante a etapa de pré-processamento, conseguiu-se reduzir dimensionalidade e s
 
 \end{enumerate}
 
-
-Uma das tarefas que utilizamos para prepara os dados foi a tokenização que tem como objetivo dividir o texto em unidades conhecidas como \textit{tokens}. Essas unidades podem ser números, espaços, palavras ou termos compostos por mais de uma palavra. O processo de tokenização é feito, em geral, identificando-se espaços em branco e pontuações que costumam delimitar os termos \cite{tokenizacao}.
-
-Depois de marcados estes termos, foram aplicadas técnicas de remoção de espaços em branco, a transformação de letras maiúsculas para minúscula, a retirada de números e de pontuação, remoção de palavras com pouco sentido semântico como artigos, preposições, conjunções, bem como outras palavras auxiliares que não agregam valor ao texto. Ex (de, a, o, que, e, do, da, em, um, para, com, não, uma, os, no, se, na) .
-Para exemplificar melhor veja uma amostra com um dados real na Tabela III com valores originais e alterados.
+    
+    Uma das tarefas que utilizamos para prepara os dados foi a tokenização que tem como objetivo dividir o texto em unidades conhecidas como \textit{tokens}. Essas unidades podem ser números, espaços, palavras ou termos compostos por mais de uma palavra. O processo de tokenização é feito, em geral, identificando-se espaços em branco e pontuações que costumam delimitar os termos \cite{tokenizacao}.
+    
+    Depois de marcados estes termos, foram aplicadas técnicas de remoção de espaços em branco, transformação de letras maiúsculas para minúscula, retirada de números e de pontuação, remoção de palavras com pouco sentido semântico como artigos, preposições, conjunções, bem como outras palavras auxiliares que não agregam valor ao texto. Ex (de, a, o, que, e, do, da, em, um, para, com, não, uma, os, no, se, na).
+    
+    Para exemplificar melhor veja uma amostra com um dado real na Tabela III.
 
 \begin{table}[h]
  \centering
@@ -270,25 +274,19 @@ Para exemplificar melhor veja uma amostra com um dados real na Tabela III com va
 \end{table}
 
 
-Os dados históricos de candidatos aprovados e reprovados anteriormente foram retirados do Documento MatchPart, dados esses que serão utilizados para treinar nosso classificador. 
+Os dados históricos de candidatos aprovados e reprovados anteriormente foram retirados do Documento MatchPart, dados estes que foram utilizados para treinar nosso classificador. 
 
 
 	\subsection{TF-IDF (Term Frequency - Inverse Document Frequency))}
 
-Os métodos mais conhecidos para calcular a relevância dos termos são: frequênci  absoluta (TF), frequência relativa, e a relação entre a frequência do termo e a frequêna
-  inversa do documento (TF-F).
-  
-Frequência absoluta ou term frequency (TF) \cite{tfidf} é a quantidade de ocorrência de um
-  termo em um determinado documento. Esta pode ser considerada uma medida simples
-  mas tem algumas desvantagens. A primeira delas é o fato de não levar em conta a quantidade de palavras existentes no documentos. Com isso, um termo que ocre poucas
-  vezes em um documento pequeno poderá ter a mesma frequência de um ter que ocorre
-  muitas vezes em documentos com grande quantidade de palavras. Outra desvantagem é
-  o fato de não ser possível identificar se um termo ocorre em poucos ou em muitos documentos.  Essa identificação pode ser importante para definir com mais precisão a classe em que um documento será encaminhado, pois termos raros podem ser mais informativos que termos mais frequentes.
- 
- O modelo TF-IDF (Term Frequency – Inverse Document Frequency) \cite{tfidf3} é um método utilizado para a representação de textos como um vetor de características utilizando no seu cálculo a frequência do
-  termo e a quantidades de documentos presentes na coleção.  \cite{tfidf1} \cite{tfidf2}Essa medida possibilita
-  indicar a quantidade de documentos em que um termo aparece. Ela é calculada usando-se a frequência em que o termo ocorre e a remoção de termos onde a frequência nos documentos é inferior a um determinado parâmetro. Esse processo resulta na diminuição da importância dada aos termos que aparecem em muitos documentos e no aumento da
-  importância daqueles que aparecem em poucos documentos. O modelo atribui um peso Wi,j para uma palavra Tj em um texto Dj conforme a equação apresentada na Figura 3.
+    Os métodos mais conhecidos para calcular a relevância dos termos são: frequência  absoluta (TF), frequência relativa, e a relação entre a frequência do termo e a frequência inversa do documento (TF-F).
+    
+    Frequência absoluta ou term frequency (TF) \cite{tfidf} é a quantidade de ocorrência de um termo em um determinado documento. Esta pode ser considerada uma medida simples mas tem algumas desvantagens. A primeira delas é o fato de não levar em conta a quantidade de palavras existentes no documentos. Com isso, um termo que ocorre poucas vezes em um documento pequeno poderá ter a mesma frequência de um termo que ocorre muitas vezes em documentos com grande quantidade de palavras. Outra desvantagem é o fato de não ser possível identificar se um termo ocorre em poucos ou em muitos documentos. Essa identificação pode ser importante para definir com mais precisão a classe em que um documento será encaminhado, pois termos raros podem ser mais informativos que termos mais frequentes.
+    
+    O modelo TF-IDF (\textit{Term Frequency – Inverse Document Frequency}) \cite{tfidf3} é um método utilizado para a representação de textos como um vetor de características utilizando no seu cálculo a frequência do
+    termo e a quantidades de documentos presentes na coleção \cite{tfidf1} \cite{tfidf2}. Essa medida possibilita
+    indicar a quantidade de documentos em que um termo aparece. Ela é calculada usando-se a frequência em que o termo ocorre e a remoção de termos onde a frequência nos documentos é inferior a um determinado parâmetro. Esse processo resulta na diminuição da importância dada aos termos que aparecem em muitos documentos e no aumento da
+    importância daqueles que aparecem em poucos documentos. O modelo atribui um peso Wi,j para uma palavra Tj em um texto Dj conforme a equação apresentada na Figura 3.
 
 
 	\begin{figure}[htbp]
@@ -302,13 +300,12 @@ Frequência absoluta ou term frequency (TF) \cite{tfidf} é a quantidade de ocor
 \item  N é a quantidade total de textos que compõem a base de entrada;
 \item  df i é a quantidade de textos que contém a palavra T.
 \end{itemize}
+    
+    Esse cálculo deve ser efetuado novamente com a entrada de novos documentos, pois a dimensão pode variar com entrada de n novos documentos e novos termos.
 
-  Esse cálculo deve ser efetuado novamente com a entrada de novos documentos, pois a dimensão pode variar com entrada de n vos documentos e novos termos.
-  
-  
-Foi utilizado a técnica de TF-IDF para criar nosso vetor de características considerando termos como palavras simples (\textit{onegrams}). Todos os termos foram gerados considerando cada documento como uma bag-of-words, sem considerar informações a respeito do contexto em que se encontra. Segundo Forman \cite{bagofwords}, o número de palavras candidatas a atributos excede o número de documentos em mais de uma ordem de magnitude, gerando matrizes esparsas e de alta dimensionalidade.
- 
-Para verificar quais candidatos são mais similares a uma determinada vaga, iremos aplicar a Similaridade do Cosseno pois é uma das medias mais utilizadas para definir similaridade entre dois documentos, pois favorece comparações do tipo zero-zero, sendo uma medida indicada aqui justamente,  pois estamos trabalhando com espaços de alta dimensionalidade e esparsos. O principio dessa métrica e medir o angulo formado por dois vetores como uma aproximação de similaridade. A similaridade do Cosseno é calculada pela equação da Figura 4:
+    Foi utilizado a técnica de TF-IDF para criar nosso vetor de características considerando termos como palavras simples (\textit{onegrams}). Todos os termos foram gerados considerando cada documento como uma \textit{bag of words}, sem considerar informações a respeito do contexto em que se encontra. Segundo Forman \cite{bagofwords}, o número de palavras candidatas a atributos excede o número de documentos em mais de uma ordem de magnitude, gerando matrizes esparsas e de alta dimensionalidade.
+     
+    Para verificar quais candidatos são mais similares a uma determinada vaga, aplicamos a Similaridade do Cosseno pois é uma das medias mais utilizadas para definir similaridade entre dois documentos, pois favorece comparações do tipo zero-zero, sendo uma medida indicada aqui justamente, por estarmos trabalhando com espaços de alta dimensionalidade e esparsos. O princípio dessa métrica e medir o angulo formado por dois vetores como uma aproximação de similaridade. A similaridade do Cosseno é calculada pela equação da Figura 4:
 
 	\begin{figure}[htbp]
 	\centerline{\includegraphics[scale=.4]{imagens/cosseno.png}}
@@ -320,17 +317,17 @@ Essa medida retorna valores no intervalo [0,1]. Conforme o angulo entre os vetor
 
 	\subsection{Sistemas de recomendação}
     	
- O objetivo dos Sistemas de Recomendação é o de retornar itens de possível interesse do usuário sem que o mesmo tenha que inserido nenhum dados em um formulário por exemplo, mas usando dados históricos. Esta tentativa de prever o que é mais adequado para um usuário é uma forma de tentar evitar a sobrecarga de informações.
+    O objetivo dos Sistemas de Recomendação é o de retornar itens de possível interesse do usuário sem que o mesmo tenha inserido nenhum dados em um formulário por exemplo, mas usando dados históricos. Esta tentativa de prever o que é mais adequado para um usuário é uma forma de tentar evitar a sobrecarga de informação.
     
- Esses sistemas vêm sendo implementados mediante o uso de diversas técnicas, que variam em função de aspectos como o objetivo a ser atingido e o tipo de item a ser recomendado.
+    Esses sistemas vem sendo implementados mediante o uso de diversas técnicas, que variam em função de aspectos como o objetivo a ser atingido e o tipo de item a ser recomendado.
     
-Os Sistemas de Recomendação podem ser classificados em três tipos: filtragem colaborativa, baseada em conteúdo e híbridos \cite{sistema_recomendacao_3}. 
-
-A Filtragem Baseada em Conteúdo parte do princípio de que os usuários tendem a interessar-se por itens similares aos que demonstraram interesse no passado. Assim é definida a similaridade entre os itens. Porém estabelecer esta similaridade entre itens pode não ser fácil em algumas situações \cite{sistema_recomendacao_content}. Para que seja estabelecida, por exemplo, a similaridade entre candidatos para uma vaga seria necessário que fossem identificados nos itens atributos a serem comparados (descrição da vaga, titulo da vaga, experiencias profissionais do candidato, por exemplo).
-
-Na recomendação baseada em filtragem colaborativa o sistema realiza sua recomendação através da comparação dos usuários e a similaridade existente entre eles, ou seja, os objetos que são recomendados são os já utilizados anteriormente por usuários com características similares as de quem deseja a recomendação. Dessa forma, é encontrado um conjunto de usuários cujos gostos são semelhantes aos gostos do usuário em questão \cite{sistema_recomendacao_content}.
+    Os Sistemas de Recomendação podem ser classificados em três tipos: filtragem colaborativa, baseada em conteúdo e híbridos \cite{sistema_recomendacao_3}. 
     
-A abordagem da filtragem híbrida procura, basicamente, combinar os pontos fortes da filtragem colaborativa e filtragem baseada em conteúdo visando criar um sistema que possa melhor atender as necessidades do usuário. Essa abordagem é constituída de vantagens proporcionadas pela filtragem baseada em conteúdo e pela filtragem colaborativa, unindo o melhor das duas técnicas e eliminando as fraquezas de cada uma, conforme apresentado pela Figura 5.
+    A Filtragem Baseada em Conteúdo parte do princípio de que os usuário tendem a interessar-se por itens similares aos que demonstraram interesse no passado. Assim é definida a similaridade entre os itens.  Porém estabelecer esta similaridade entre itens pode não ser fácil em algumas situações \cite{sistema_recomendacao_content}. Para que seja estabelecida, por exemplo, a similaridade entre candidatos para uma vaga seria necessário que fossem identificados nos itens atributos a serem comparados (descrição da vaga, título da vaga, experiências profissionais do candidato, por exemplo).
+    
+    Na recomendação baseada em filtragem colaborativa o sistema realiza sua recomendação através da comparação dos usuários e a similaridade existente entre eles, ou seja, os objetos que são recomendados são os já utilizados anteriormente por usuários com características similares as de quem deseja a recomendação. Dessa forma, é encontrado um conjunto de usuários cujos gostos são semelhantes aos gostos do usuário em questão \cite{sistema_recomendacao_content}.
+    
+    A abordagem da filtragem híbrida procura, basicamente, combinar os pontos fortes da filtragem colaborativa e filtragem baseada em conteúdo visando criar um sistema que possa melhor atender as necessidades do usuário. Essa abordagem é constituída de vantagens proporcionadas pela filtragem baseada em conteúdo e pela filtragem colaborativa, unindo o melhor das duas técnicas e eliminando as fraquezas de cada uma, conforme apresentado pela Figura 5.
 
 \begin{figure}[htbp]
 	\centerline{\includegraphics[scale=.5]{imagens/filtragem_hibrida.png}}
@@ -389,7 +386,7 @@ Ao final dessas etapas, criou-se modelo capaz de informar se determinado candida
     Antes da aplicação da rede neural, foram utilizados algumas etapas de pré-processamento. 
     Durante a tarefa de limpeza, alguns registros foram removidos respeitando o seguinte critério: ter pelo menos dois campos preenchidos dos cinco existes no objeto.
     
-    Foi realizado um processo de padronização no texto dos dos candidatos das vagas deixando conforme apresentado na Tabela III. Esse processo se fez necessário para evitar inconsistências na criação da nossa bag of words, que foi criada utilizando a técnica de TF-IDF \cite{tfidf3}.
+    Foi realizado um processo de padronização no texto dos dos candidatos das vagas deixando conforme apresentado na Tabela III. Esse processo se fez necessário para evitar inconsistências na criação da nossa \textit{bag of words}, que foi criada utilizando a técnica de TF-IDF \cite{tfidf3}.
     
     Primeiro selecionamos todas as vagas com seus respectivos candidatos aprovados e reprovados no processo seletivo para posteriormente aplicar a medida de similaridade do cosseno os mesmos. As combinações foram feitas em pares, conforme apresentado abaixo:
     
@@ -422,7 +419,7 @@ O gráfico apresentado na Figura 7, mostra o valor médio das distâncias  de si
   \end{figure*} 
 
 O próximo passo no experimento foi treinar uma rede neural que fosse capaz de classificar candidatos para tentar prever se os mesmos seriam ou não contratados para uma determinada vaga.
-    A topologia de rede esta apresentada na figura Figura 9, e abaixo segue as configurações de criação do modelo preditivo. 
+    A topologia de rede esta apresentada na figura Figura 9.
     
     Particularmente, não é possível resumir o processo de design das camadas ocultas com poucas regras. 
     
@@ -489,9 +486,9 @@ Aplicamos as seguintes medidas  de avaliação para analisar a qualidade do mode
     Motivado pelo potencial dos sistemas de recomendação estudamos como criar modelos de seleção de candidatos de forma automática. A proposta aqui é utilizar uma rede neural para aprender o que é relevante para empresas no quesito de analise de currículo.
     O volume de currículos dificulta o processo de busca e filtragem de informações, com isso, sistemas de recomendação se tornaram importantes e necessários para auxiliar usuários.
     Considerando-se que o objetivo principal deste trabalho era criar um classificador para predizer se um candidato deve ou não ser recomendados para vaga, podemos considerar como atingido.
-    Para os próximos experimentos, irei utilizar os processos descritos aqui, mas buscando outros possíveis atributos relevantes, além de aplicar outros algoritmos de aprendizagem de máquina.
+    Para os próximos experimentos, iremos utilizar os processos descritos aqui, mas buscando outros atributos, além de aplicar outros algoritmos de aprendizagem de máquina.
 
-\begin{thebibliography}
+\begin{thebibliography}{00}
 
 \bibitem{artigo_referencia} F. Borisyuk, K. Kenthapadi, D. Stein, and B. Zhao. CaSMoS: A framework for
 learning candidate selection models over structured queries and documents. In
